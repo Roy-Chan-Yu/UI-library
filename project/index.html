@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+
+    <!-- Office UI Fabric-->
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.min.css">
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.components.min.css">
+    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/js/fabric.min.js"></script>
+
+    <!-- Animate.css -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'
+        integrity='sha512-TyUaMbYrKFZfQfp+9nQGOEt+vGu4nKzLk0KaV3nFifL3K8n7lzb8DayTzLOK0pNyzxGJzGRSw78e8xqJhURJ3Q=='
+        crossorigin='anonymous' />
+
+    <!-- Linkify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/3.0.4/linkify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/3.0.4/linkify-html.js'
+        integrity='sha512-GOfAZWBEphhDVCzbZa87vFmBcn63fspLY8b72NqkNfC+P/BUsnol2gsixz/OuwPxfTfu5oGrTGBEZXiLfsBK5w=='
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/3.0.4/linkify.js'
+        integrity='sha512-PofzIK96ge1fLexl7GHJPcjtckHTN3lfXEztuZipr+4+yvjRUjY9hxQVu9Em7aJ+APRXDChffa+6ysBqTZBmEw=='
+        crossorigin='anonymous'></script>
+
+    <!-- Highlight -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    <!-- qrcode -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js'
+        integrity='sha512-NFUcDlm4V+a2sjPX7gREIXgCSFja9cHtKPOL1zj6QhnE0vcY695MODehqkaGYTLyL2wxe/wtr4Z49SvqXq12UQ=='
+        crossorigin='anonymous'></script>
+
+    <!-- fontawesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.css'
+        integrity='sha512-yzjXBpg50JPauUI6Y7KGhRILx8jusBy1GyW6eHW2VXWv063AC7onqnkR8Jacy69usMOuAcztBY3zRF5n+EL4Qg=='
+        crossorigin='anonymous' />
+
+    <!-- toastr replace of popup windows -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css'
+        integrity='sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=='
+        crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js'
+        integrity='sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=='
+        crossorigin='anonymous'></script>
+
+    <!-- SweetAlert -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js'
+        integrity='sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=='
+        crossorigin='anonymous'></script>
+
+    <!-- Intro -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.3.0/intro.min.js'
+        integrity='sha512-WYNEDpX7FCz0ejmdUFl444n+v7gDgDFYmxy2YBx99v15UUk3zU5ZWYFBXFCvWYvd+nv/guwUnXmrecK7Ee0Wtg=='
+        crossorigin='anonymous'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.3.0/introjs.min.css'
+        integrity='sha512-YZO1kAqr8VPYJMaOgT4ZAIP4OeCuAWoZqgdvVYjeqyfieNWrUTzZrrxpgAdDrS7nV3sAVTKdP6MSKhqaMU5Q4g=='
+        crossorigin='anonymous' />
+
+    <!-- Dropzone -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/basic.css'
+        integrity='sha512-+Vla3mZvC+lQdBu1SKhXLCbzoNCl0hQ8GtCK8+4gOJS/PN9TTn0AO6SxlpX8p+5Zoumf1vXFyMlhpQtVD5+eSw=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.css'
+        integrity='sha512-7uSoC3grlnRktCWoO4LjHMjotq8gf9XDFQerPuaph+cqR7JC9XKGdvN+UwZMC14aAaBDItdRj3DcSDs4kMWUgg=='
+        crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.js'
+        integrity='sha512-9e9rr82F9BPzG81+6UrwWLFj8ZLf59jnuIA/tIf8dEGoQVu7l5qvr02G/BiAabsFOYrIUTMslVN+iDYuszftVQ=='
+        crossorigin='anonymous'></script>
+
+    <!-- GitGraph -->
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.9.0/gitgraph.css'
+        integrity='sha512-Tfj6C0r3iOkXjJANEkjgAQtjqaXy1ZpKpp987LkEFKtORsDZokrvOXGEco1608NQTIDSx77tm2umR18GSMZtTg=='
+        crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.9.0/gitgraph.js'
+        integrity='sha512-9M6772o1SGY0EHrp++j8SGtTFuSvarKHWuXWwVPZmuqX7+lEsv2mfF6jP3Zrho+ILp1Arl7+O6A6M+y+AnBXPQ=='
+        crossorigin='anonymous'></script>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script> -->
+
+    <!-- Dragula -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.css'
+        integrity='sha512-gGkweS4I+MDqo1tLZtHl3Nu3PGY7TU8ldedRnu60fY6etWjQ/twRHRG2J92oDj7GDU2XvX8k6G5mbp0yCoyXCA=='
+        crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.js'
+        integrity='sha512-J5cp0WYyizcYpL3NaS5opOQCYmPXBs+rpy9GXoZURPpluI51cFokqkJzd2Cl73Ti+Y95rLokCAoytkNMdVI78g=='
+        crossorigin='anonymous'></script>
+
+    <!-- ScreenFull -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.2.0/screenfull.js'
+        integrity='sha512-UM5RP/VMYnvdVu7H2ip2s6DutNqa4oB60jTvhxTa5ouXRdvWqq4DdAuj5TysD4xq9gC3wLUBIwpRIQcBUf3UUQ=='
+        crossorigin='anonymous'></script>
+
+    <!-- Moment -->
+    <!-- FullCalendar -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js'
+        integrity='sha512-Bm8FBfOFILW7qzf514l/KJaW+VKYyErRPjBRcpCJ1IfmBJcL9PRSBo6fyhE0i8BBmBbiMyQrNC97m1b1dDWM0g=='
+        crossorigin='anonymous'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"
+        integrity="sha512-o0rWIsZigOfRAgBxl4puyd0t6YKzeAw9em/29Ag7lhCQfaaua/mDwnpE2PVzwqJ08N7/wqrgdjc2E0mwdSY2Tg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css"
+        integrity="sha512-KXkS7cFeWpYwcoXxyfOumLyRGXMp7BTMTjwrgjMg0+hls4thG2JGzRgQtRfnAuKTn2KWTDZX4UdPg+xTs8k80Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Onsen UI (mobile)-->
+    <!-- <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/onsen/2.9.2/css/old-onsen-css-components.min.css'
+        integrity='sha512-2QgFeH8z0a5xKNMgTrPTmtjePx//WpHlERAlyk4mu4WIPkar2crOwGOknVhSQcg+42R104r4cne4uFXuX/9Xmw=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/onsen/2.9.2/css/onsen-css-components.min.css'
+        integrity='sha512-L7OrTXOjYI2QoEBXkIlLtkMKNiHF5dAgHsbsoAxzFCYRa4IjFl4aQVmS8/Is5mlSKNI65RFhUIqVyT0ESR4i8Q=='
+        crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/onsen/2.9.2/js/onsenui.js'
+        integrity='sha512-2zZTxQUMpHxW68lHyReNtJ1DI8NvJnfoLJVQidF5oXY0i+i391D9XWrmtO4cTc1D3BsYsuIcfpco+ZtIp9LoiQ=='
+        crossorigin='anonymous'></script> -->
+
+    <!-- Awesomplete -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css'
+        integrity='sha512-RT/9M3vzjYojy97YiNTZbyrQ4nJ+gNoinZKTGSVvLITijfQIAIDNicUe+U2KaeOWo9j7IbRzRisx/7eglOc+wA=='
+        crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.js'
+        integrity='sha512-t3zV/oAkSZUrvb/7p1q1+uh/i56JinQ+bmiulnHhbHZc7dq09CxJ1BByyi7A4+lF76+CcJtSVFtb7na7Oe7Cgg=='
+        crossorigin='anonymous'></script>
+
+
+    <!-- Switchery -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.css'
+        integrity='sha512-uyGg6dZr3cE1PxtKOCGqKGTiZybe5iSq3LsqOolABqAWlIRLo/HKyrMMD8drX+gls3twJdpYX0gDKEdtf2dpmw=='
+        crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.js'
+        integrity='sha512-lC8vSUSlXWqh7A/F+EUS3l77bdlj+rGMN4NB5XFAHnTR3jQtg4ibZccWpuSSIdPoPUlUxtnGktLyrWcDhG8RvA=='
+        crossorigin='anonymous'></script>
+
+    <!-- X-editable -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css"
+        rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+    <!-- jQuery Knob -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.9/jquery.knob.min.js'
+        integrity='sha512-IBzT0NRkt3qDgccax7vdmywE0baPC9iMPILrhSLwnPgDI0gkf85N8mnP4Meso1vAfq2mv6SNk+wQytixTTzPMQ=='
+        crossorigin='anonymous'></script>
+
+    <!-- PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+
+    <!-- Chart -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js'
+        integrity='sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=='
+        crossorigin='anonymous'></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <h2>materialize.css</h2>
+    <a class="waves-effect waves-light btn">button</a>
+    <a class="waves-effect waves-light btn orange">button</a>
+
+    <h2>Office UI Fabric</h2>
+
+    <div class="ms-PeoplePicker">
+        <div class="ms-PeoplePicker-searchBox">
+            <div class="ms-TextField  ms-TextField--textFieldUnderlined ">
+                <input class="ms-TextField-field" type="text" value="" placeholder="選擇聯絡人名單">
+            </div>
+        </div>
+        <div class="ms-PeoplePicker-results">
+            <div class="ms-PeoplePicker-resultGroup">
+                <div class="ms-PeoplePicker-resultGroupTitle">
+                    聯絡人
+                </div>
+                <div class="ms-PeoplePicker-result " tabindex="1">
+                    <div class="ms-Persona ms-Persona--sm">
+                        <div class="ms-Persona-imageArea">
+                            <div class="ms-Persona-initials ms-Persona-initials--blue">RM</div>
+                        </div>
+                        <div class="ms-Persona-presence">
+                        </div>
+                        <div class="ms-Persona-details">
+                            <div class="ms-Persona-primaryText">Russel Miller</div>
+                            <div class="ms-Persona-secondaryText">Sales</div>
+                        </div>
+                    </div>
+                    <button class="ms-PeoplePicker-resultAction"><i class="ms-Icon ms-Icon--Clear"></i></button>
+                </div>
+                <div class="ms-PeoplePicker-result " tabindex="1">
+                    <div class="ms-Persona ms-Persona--sm">
+                        <div class="ms-Persona-imageArea">
+                            <div class="ms-Persona-initials ms-Persona-initials--purple">DF</div>
+                        </div>
+                        <div class="ms-Persona-presence">
+                        </div>
+                        <div class="ms-Persona-details">
+                            <div class="ms-Persona-primaryText">Douglas Fielder</div>
+                            <div class="ms-Persona-secondaryText">Public Relations</div>
+                        </div>
+                    </div>
+                    <button class="ms-PeoplePicker-resultAction"><i class="ms-Icon ms-Icon--Clear"></i></button>
+                </div>
+                <div class="ms-PeoplePicker-result " tabindex="1">
+                    <div class="ms-Persona ms-Persona--sm">
+                        <div class="ms-Persona-imageArea">
+                            <div class="ms-Persona-initials ms-Persona-initials--black">GS</div>
+                        </div>
+                        <div class="ms-Persona-presence">
+                        </div>
+                        <div class="ms-Persona-details">
+                            <div class="ms-Persona-primaryText">Grant Steel</div>
+                            <div class="ms-Persona-secondaryText">Sales</div>
+                        </div>
+                    </div>
+                    <button class="ms-PeoplePicker-resultAction"><i class="ms-Icon ms-Icon--Clear"></i></button>
+                </div>
+                <div class="ms-PeoplePicker-result " tabindex="1">
+                    <div class="ms-Persona ms-Persona--sm">
+                        <div class="ms-Persona-imageArea">
+                            <div class="ms-Persona-initials ms-Persona-initials--green">HW</div>
+                        </div>
+                        <div class="ms-Persona-presence">
+                        </div>
+                        <div class="ms-Persona-details">
+                            <div class="ms-Persona-primaryText">Harvey Wallin</div>
+                            <div class="ms-Persona-secondaryText">Public Relations</div>
+                        </div>
+                    </div>
+                    <button class="ms-PeoplePicker-resultAction"><i class="ms-Icon ms-Icon--Clear"></i></button>
+                </div>
+            </div>
+            <button class="ms-PeoplePicker-searchMore">
+                <div class="ms-PeoplePicker-searchMoreIcon">
+                    <i class="ms-Icon ms-Icon--Search"></i>
+                </div>
+                <div class="ms-PeoplePicker-searchMoreText">
+                    Search my groups
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <h2>Animate library</h2>
+
+    <div id="target" class="animated jello">
+        <p>Jello !</p>
+    </div>
+
+    <h2>Wow library</h2>
+
+    <p class="wow bounce">
+        我只有在出現時才會呈現特效喔！
+    </p>
+
+    <h2>CKEditor</h2>
+    <textarea name="editor" id="editor" cols="30" rows="10">
+        <p>CKEditor demo</p>
+        <hr />
+        <p>Values</p>
+    </textarea>
+
+    <h2>Linkify-jquery</h2>
+    <div class="border" id="original-text">linkify demo: http://www.google.com</div>
+    <div class="result"></div>
+
+    <h2>Highlight</h2>
+    <pre>
+        <code class="java">
+            package com.pouchen
+            static void main(String[] args) {
+
+            }
+        </code>
+    </pre>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+
+    <div class="container">
+        <h2>QRCode</h2>
+        <div class="row  align-items-center">
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 ">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 寬度一致(fa-fw) 旋轉(fa-pulse) -->
+    <h2>FontAwesome</h2>
+    <div><i class="fab fa-fw fa-bluetooth"></i></div>
+    <div><i class="fa fa-fw fa-camera-retro"></i> 原始大小</div>
+    <div><i class="fa fa-fw fa-camera-retro fa-lg"></i> 33%</div>
+    <div><i class="fa fa-fw fa-camera-retro fa-2x"></i> fa-2x</div>
+    <div><i class="fa fa-fw fa-camera-retro fa-3x"></i> fa-3x</div>
+    <div><i class="fa fa-fw fa-camera-retro fa-4x"></i> fa-4x</div>
+    <div><i class="fa fa-fw fa-pulse fa-camera-retro fa-5x"></i> fa-5x</div>
+
+    <div><i class="fa fa-ban text-danger"></i></div>
+    <!-- 圖層 -->
+    <span class="fa-stack fa-lg">
+        <i class="fa fa-camera fa-stack-1x"></i>
+        <i class="fa fa-ban fa-stack-2x text-danger"></i>
+    </span>
+
+    <h2>Toaster(replace of popup windows)</h2>
+    <script>
+        // Display a warning toast, with no title
+        toastr.warning('My name is Inigo Montoya. You killed my father, prepare to die!')
+
+        // Display a success toast, with a title
+        toastr.success('Have fun storming the castle!', 'Miracle Max Says')
+
+        // Display an error toast, with a title
+        toastr.error('I do not think that word means what you think it means.', 'Inconceivable!')
+
+        // Override global options
+        toastr.success('We do have the Kapua suite available.', 'Turtle Bay Resort', { timeOut: 1000 })
+
+    </script>
+
+    <!-- SweatAlert -->
+
+    <script>
+        // swal('Title...', 'Hello World!', 'success');
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("Your imaginary file is safe!");
+                }
+            });
+    </script>
+
+    <h2>Intro</h2>
+
+
+    <div data-step="1" data-intro="請先輸入姓名" class="col-md-4">
+        <span>Name</span>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <div data-step="2" data-intro="輸入Email" class="col-md-4">
+        <span>Email</span>
+        <input type="text">
+    </div>
+
+    <div data-step="3" data-intro="註冊" class="col-md-4">
+        <input type="button" value="註冊">
+    </div>
+
+    <h2>Dropzone(上傳檔案)</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data" id="uploadForm" class="dropzone">
+        <input type="file" name="file" id="file">
+    </form>
+
+    <h2>GitGraph</h2>
+    <canvas id="gitGraph"></canvas>
+
+    <div class="container">
+
+        <h2>Dragula</h2>
+        <div id="kanban" class="row">
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="todo">
+                            &nbsp;
+
+                            <div class="alert alert-success pointer" role="alert">
+                                Card1
+                            </div>
+                            <div class="alert alert-success pointer" role="alert">
+                                Card2
+                            </div>
+                            <div class="alert alert-success" role="alert">
+                                Card3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading pointer">
+                        <h3 class="panel-title">In Progress</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="in-progress">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading pointer">
+                        <h3 class="panel-title">Done</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="done">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <h2>FullScreen</h2>
+    <h2 id="fullScreenSupport"></h2>
+
+    <button id="fullScreen">
+        全螢幕顯示
+    </button>
+    <button id="imageFullScreen">
+        將圖片全螢幕顯示
+    </button>
+    <button id="cancelFullScreen">
+        取消全螢幕
+    </button>
+
+    <img id="image" src="http://placehold.it/500x300" />
+
+
+    <h2>Calendar</h2>
+    <hr>
+    <div id="calendar"></div>
+
+    <h2>Awesomplete</h2>
+    <hr>
+    <div class="container-fluid">
+        PG language: <input type="text" id="programming-language">
+    </div>
+
+    <h2>Switchery</h2>
+    <hr>
+    isSwitchery:<input type="checkbox" id="switchery" />
+
+    <h2>X-editable</h2>
+    <hr>
+
+    <div class="container">
+
+        UserNameModify: <a href="#" id="username" data-type="date" data-pk="1" data-title="請輸入文字"
+            data-url="https://jsonplaceholder.typicode.com/posts"></a>
+        <a href="#" id="username1" data-type="combodate" data-pk="2" data-title="請輸入文字"
+            data-url="https://jsonplaceholder.typicode.com/posts"></a>
+
+        <a href="#" id="username3" data-type="checklist" data-pk="4" data-title="請輸入文字"
+            data-url="https://jsonplaceholder.typicode.com/posts"></a>
+        <a href="#" id="username4" data-type="wysihtml5" data-pk="5" data-title="請輸入文字"
+            data-url="https://jsonplaceholder.typicode.com/posts"></a>
+
+    </div>
+
+    <h2>jQuery Knob</h2>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+                h
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+                m
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+                s
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+                <input type="text" name="dial" id="hour" class="dial" data-min="0" data-max="24" data-width="100%"
+                    data-readOnly="true">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+                <input type="text" name="dial" id="min" class="dial" data-min="0" data-max="59" data-width="100%"
+                    data-readOnly="true">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+                <input type="text" name="dial" id="sec" class="dial" data-min="0" data-max="59" data-width="100%"
+                    data-readOnly="true">
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            調整明亮度
+        </div>
+        <div class="col-xs-12">
+            <input type="text" id="setBrightness" data-min="0" data-max="100" value="100">
+        </div>
+    </div>
+
+    <h2>PDF</h2>
+    <hr>
+    <div id="pdf-container"></div>
+    <input id="btn-pdf" type="button">generate pdf</input>
+    <h2>Chart</h2>
+    <hr>
+
+    <div class="container">
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <canvas id="chart" width="200" height="200"></canvas>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <canvas id="chart02" width="200" height="200"></canvas>
+        </div>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        var peoplePickerElements = document.querySelectorAll(".ms-PeoplePicker");
+        for (var i = 0; i < peoplePickerElements.length; i++) {
+            new fabric['PeoplePicker'](peoplePickerElements[i]);
+        }
+
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'
+        integrity='sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=='
+        crossorigin='anonymous'>
+        </script>
+
+    <script>
+        var wow = new WOW(
+            {
+                boxClass: 'wow',      // 要套用WOW.js縮需要的動畫class(預設是wow)
+                animateClass: 'animated', // 要"動起來"的動畫(預設是animated, 因此如果你有其他動畫library要使用也可以在這裡調整)
+                offset: 0,          // 距離顯示多遠開始顯示動畫 (預設是0, 因此捲動到顯示時才出現動畫)
+                mobile: true,       // 手機上是否要套用動畫 (預設是true)
+                live: true,       // 非同步產生的內容是否也要套用 (預設是true, 非常適合搭配SPA)
+                callback: function (box) {
+                    // 當每個要開始時, 呼叫這裡面的內容, 參數是要開始進行動畫特效的element DOM
+                },
+                scrollContainer: null // 可以設定成只套用在某個container中捲動才呈現, 不設定就是整個視窗
+            }
+        );
+        wow.init();
+    </script>
+
+    <script>
+        CKEDITOR.replace('editor');
+        console.log(CKEDITOR.instances.editor.getData());
+        CKEDITOR.instances.editor.updateElement();
+        console.log($('textarea[name=editor]').val());
+    </script>
+
+    <script>
+        var content = linkifyHtml($('#original-text').html());
+        console.log(content);
+        $('.result').html(content);
+    </script>
+
+    <script>
+        $('#qrcode').qrcode({
+            text: 'http://www.google.com',
+            width: 120,
+            height: 120
+        });
+    </script>
+
+    <script>
+        introJs()
+            .setOption('showProgress', true)
+            .start();
+    </script>
+
+    <script>
+        Dropzone.options.uploadForm = {
+            dictDefaultMessage: "把檔案拉到這裡就可以上傳"
+        }
+    </script>
+
+    <script>
+        let gitgraph = new GitGraph();
+        let master = gitgraph.branch("Form");
+
+        master.commit({
+            shal: new Date(),
+            message: "傳閱",
+            author: "by Roy"
+        });
+
+        let rdBranch = master.branch("RD Team");
+        let finBranch = master.branch("GA Team");
+
+        rdBranch.checkout();
+        gitgraph.commit({
+            sha1: "2016/12/17 11:00",
+            message: "表單已閱",
+            author: "by Wellwind"
+        });
+
+        finBranch.checkout();
+        gitgraph.commit({
+            sha1: "2016/12/17 11:05",
+            message: "表單已閱",
+            author: "by Shawn"
+        });
+
+        rdBranch.checkout();
+        gitgraph.commit({
+            sha1: "2016/12/17 13:00",
+            message: "表單已閱",
+            author: "by Mike"
+        });
+
+        finBranch.checkout();
+        gitgraph.commit({
+            sha1: "2016/12/18 09:30",
+            message: "表單已閱",
+            author: "by Jack"
+        });
+
+        gitgraph.commit({
+            sha1: "2016/12/18 11:30",
+            message: "表單已閱",
+            author: "by Mary",
+            tag: "經費核准"
+        });
+
+        finBranch.merge(master, {
+            dotColor: "lightGreen",
+            sha1: "2016/12/18 11:30",
+            message: "財務部已傳閱完畢",
+            author: "by System"
+        });
+        finBranch.delete();
+
+        rdBranch.checkout();
+        gitgraph.commit({
+            sha1: "2016/12/18 13:40",
+            message: "表單已閱",
+            author: "by Susan"
+        });
+
+        rdBranch.merge(master, {
+            dotColor: "lightGreen",
+            sha1: "2016/12/18 13:40",
+            message: "研發部已傳閱完畢",
+            author: "by System"
+        });
+        rdBranch.delete();
+
+        master.commit({
+            dotColor: "black",
+            sha1: "2016/12/18 13:40",
+            message: "表單已傳閱完畢",
+            author: "by System"
+        });
+    </script>
+
+    <script>
+
+        let dragulaCards = dragula([
+            document.querySelector('#todo'),
+            document.querySelector('#in-progress'),
+            document.querySelector('#done')
+        ]);
+
+        dragulaCards.on('drop', (el, target, source, sibling) => {
+            console.log(source);
+            console.log(target);
+            console.log(sibling);
+        });
+
+        let dragulaKanban = dragula([
+            document.querySelector('#kanban')
+        ], {
+            moves: (el, container, handle) => {
+                return handle.classList.contains('panel-title');
+            }
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(() => {
+            $('#fullScreenSupport').html(
+                screenfull.enabled ? ' The browser do support the full screen API' :
+                    'The browser do not support the full screen API'
+            );
+        })
+
+        $('#fullScreen').click(function () {
+            if (screenfull.enabled) {
+                screenfull.request();
+            }
+        });
+
+        $('#imageFullScreen').click(function () {
+            if (screenfull.enabled) {
+                screenfull.request(document.getElementById('image'));
+            }
+        });
+
+        $('#cancelFullScreen').click(function () {
+            if (screenfull.enabled) {
+                screenfull.exit();
+            }
+        });
+    </script>
+
+    <script>
+
+        $('#calendar').fullCalendar({
+            editable: true, // 啟動拖曳調整日期
+            header: { // 頂部排版
+                left: "prev,next today", // 左邊放置上一頁、下一頁和今天
+                center: "title", // 中間放置標題
+                right: "month,basicWeek,basicDay" // 右邊放置月、周、天
+            },
+            editable: true,
+            events: [
+                {
+                    title: '上週的活動',
+                    start: moment().subtract(7, 'days'),
+                    end: moment()
+                },
+            ],
+            dayClick: (date, event, view) => {
+                console.log('add event');
+                console.log(date);
+                console.log(event);
+                console.log(view);
+            }
+        });
+    </script>
+
+    <script>
+        new Awesomplete(document.getElementById('programming-language'), {
+            list: ['JavaScript', 'HTML', 'CSS', 'C#', 'C', 'Java', 'PHP', 'Ruby', 'Python']
+        });
+    </script>
+
+    <script>
+        let switcheryOptions = {
+            color: '#64bd63', // 當checked時的背景顏色
+            secondaryColor: '#dfdfdf', // unchecked時的背景顏色
+            jackColor: '#fff', // checked時的按鈕顏色
+            jackSecondaryColor: null, // uncheck時的按鈕顏色
+            className: 'switchery', // class名稱
+            disabled: false, // 是否設為disabled
+            disabledOpacity: 0.5, // 當設為disabled時的透明度
+            speed: '0.1s', // 開關切換的速度
+            size: 'default' // 開關大小(small, default, large)
+        }
+        new Switchery(document.getElementById('switchery'), switcheryOptions);
+
+        $('input[type=checkbox]').change(function () {
+            console.log(this.checked);
+        });
+    </script>
+
+    <script>
+        $('#username').editable();
+        $('#username1').editable();
+        $('#username2').editable();
+        $('#username3').editable();
+        $('#username4').editable();
+        $('#username5').editable();
+    </script>
+
+    <script>
+        $('.dial').knob();
+        const setTime = () => {
+            $('#hour').val(moment().get('hour')).trigger('change');;
+            $('#min').val(moment().get('minute')).trigger('change');;
+            $('#sec').val(moment().get('second')).trigger('change');;
+        }
+
+        setInterval(function () {
+            setTime()
+        }, 1000);
+
+        const setBrightness = (value) => {
+            var brightness = parseInt(255 * value / 100);
+            var textBrightness = Math.abs(255 - brightness);
+            $('body').css('background-color', `rgb(${brightness}, ${brightness}, ${brightness})`);
+            $('body').css('color', `rgb(${textBrightness}, ${textBrightness}, ${textBrightness})`);
+        }
+
+        $('#setBrightness').knob({
+            'change': function (value) {
+                setBrightness(value);
+            },
+            'release': function (value) {
+                setBrightness(value);
+            }
+        })
+
+    </script>
+
+    <!-- PDF -->
+    <script>
+        
+        $('#btn-pdf').click(function() {
+            var doc = new jsPDF();
+    
+            doc.text('Hello world!', 10, 10);
+            // doc.save('helloworld.pdf');
+    
+            html2canvas(document.body, {
+                onrendered: function (canvas) {
+                    var image = canvas.toDataURL("image/png");
+                    doc.addImage(image, 'png', 0, 0, canvas.width, canvas.height);
+                    // doc.save('test.pdf');
+                }
+            });
+        })
+    </script>
+
+    <script>
+        var ctx = $('#chart');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['一月', '二月', '三月'],
+                datasets: [{
+                    backgroundColor: [
+                        'rgba(255,99,132,0.3)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255,206,86,0.3)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,0.8)',
+                        'rgba(54,162,235,0.8)',
+                        'rgba(255,206,132,0.8)',
+                        'rgba(75,192,132,0.8)',
+                    ],
+                    borderWidth: 1,
+                    label: '銷售業績(萬)',
+                    data: [50, 49, 70]
+                }],
+            }
+        });
+
+        var ctx02 = $('#chart02');
+        new Chart(ctx02, {
+            type: 'bar',
+            data: {
+                labels: ['四月', '五月', '六月'],
+                datasets: [{
+                    type: 'bar',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 2,
+                    label: '銷售業績(萬)',
+                    data: [50,40,100]
+                }, {
+                    type: 'line',
+                    label: '新開發客戶',
+                    data: [10,14,20]
+                }]
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
